@@ -1,15 +1,15 @@
 import csv
 from pprint import pprint
 
-EINSTEIN_CSV = 'Albert,Einstein,1879-03-14,1955-04-18,Germany,"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect",physics,1921'
+PLANCK_CSV = 'Max,Planck,1858-04-23,1947-10-04,Schleswig (now Germany),in recognition of the services he rendered to the advancement of Physics by his discovery of energy quanta,physics,1918'
 
-EINSTEIN = {
-    "birthplace": "Germany",
-    "name": "Albert",
-    "surname": "Einstein",
-    "born": "1879-03-14",
+PLANCK = {
+    "birthplace": "Schleswig (now Germany)",
+    "name": "Max",
+    "surname": "Planck",
+    "born": "1858-04-23",
     "category": "physics",
-    "motivation": "for his services to Theoretical Physics...",
+    "motivation": "in recognition of the services...",
 }
 
 with open("laureates.csv", "r") as f:
@@ -17,6 +17,6 @@ with open("laureates.csv", "r") as f:
     laureates = list(reader)
 
 for laureate in laureates:
-    if laureate["surname"] == "Einstein":
+    if laureate["surname"] == "Planck":
         pprint(laureate)
         break
